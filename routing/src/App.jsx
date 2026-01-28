@@ -1,0 +1,27 @@
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
+
+function Home(){
+  return <h1>Home Page</h1>
+}
+
+function Contact(){
+  return <h1>Contact Page</h1>
+}
+
+function About(){
+  return <h2>This is the About page</h2>
+}
+
+function App(){
+  return(
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/about" element={<About/>}/>
+      </Routes>
+    </BrowserRouter>
+  )
+};
+
+export default App;
